@@ -1,0 +1,9 @@
+commonAnnotations:
+  changeme: totriggeredit
+
+commonLabels:
+  demo: lunch
+
+resources:
+  - deploy.yaml
+  - svc.yaml
