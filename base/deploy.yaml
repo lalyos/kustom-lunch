@@ -2,7 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    kubernetes.io/change-cause: kubectl run lunch --image=lalyos/lunch-wto --env=TITLE=Lets
+    kubernetes.io/change-cause: simple deployment
+    created.by: kubectl run lunch --image=lalyos/lunch-wto --env=TITLE=Lets
       have a lunch --env=COLOR=lightblue --port=80 --record=true --labels=app=lunch
       --dry-run=true --output=yaml
   labels:
@@ -20,13 +21,8 @@ spec:
         app: lunch
     spec:
       containers:
-      - env:
-        - name: TITLE
-          value: Lets have a lunch
-        - name: COLOR
-          value: lightblue
+      - name: lunch
         image: lalyos/lunch-wto
-        name: lunch
         ports:
         - containerPort: 80
         resources: {}

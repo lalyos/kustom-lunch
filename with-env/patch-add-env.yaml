@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lunch
+spec:
+  template:
+    spec:
+      containers:
+      - name: lunch
+        env:
+        - name: TITLE
+          value: Lets have a lunch
+        - name: COLOR
+          value: lightgreen
+        - name: BODY
+          value: with env vars hardcoded into deployment.yaml

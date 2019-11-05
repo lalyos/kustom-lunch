@@ -23,3 +23,7 @@ bases references with relative references:
 bases:
   - ../base
 ```
+
+## Exercices
+
+See [EXERCISES.md](EXERCISES.md) about proper environment variable handling.

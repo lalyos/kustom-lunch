@@ -1,0 +1,8 @@
+commonAnnotations:
+  kubernetes.io/change-cause: add env vars
+
+bases:
+  - ../base
+
+patchesStrategicMerge:
+  - patch-add-env.yaml

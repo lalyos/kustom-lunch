@@ -1,0 +1,18 @@
+commonAnnotations:
+  kubernetes.io/change-cause: use configmap generator
+
+# new resources should be labeled
+commonLabels:
+  demo: lunch
+
+bases:
+  - ../base
+
+configMapGenerator:
+  - name: lunch-config
+    literals:
+      - TITLE=Welcome from configMap
+      - COLOR=lightgreen
+      - BODY=This is a kustomize generated configmap
+patchesStrategicMerge:
+  - patch-env-from-cm.yaml

@@ -1,0 +1,11 @@
+commonAnnotations:
+  kubernetes.io/change-cause: add env from configmap
+
+bases:
+  - ../base
+
+resources:
+  - configmap.yaml
+
+patchesStrategicMerge:
+  - patch-env-from-cm.yaml
