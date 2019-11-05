@@ -1,0 +1,11 @@
+commonAnnotations:
+  changeme: totriggeredit
+
+commonLabels:
+  demo: lunch
+
+bases:
+  - ../base
+
+resources:
+  - ing.yaml

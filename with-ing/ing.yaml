@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: lunch
+spec:
+  rules:
+  - host: lunch.EDITME
+    http:
+      paths:
+      - backend:
+          serviceName: lunch
+          servicePort: 80
