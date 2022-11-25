@@ -1,12 +1,16 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: lunch
 spec:
   rules:
-  - host: lunch.EDITME
+  - host: lunch.u0.k8z.eu
     http:
       paths:
       - backend:
-          serviceName: lunch
-          servicePort: 80
+          service:
+            name: lunch
+            port:
+              number: 80
+        path: /
+        pathType: Prefix
